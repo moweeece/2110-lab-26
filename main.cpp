@@ -31,7 +31,7 @@ void deleteDataVec(vector<string>&);
 void deleteDataList(list<string>&);
 void deleteDataSet(set<string>&);
 
-const int NUM_SIMULATIONS = 15;
+const int NUM_SIMULATIONS = 1;
 
 int main() {
     // 3D array declaration with 4 operations and 3 containers
@@ -132,7 +132,7 @@ int main() {
     
     // Read time output
     cout << setw(15) << "Number of Simulations: " << NUM_SIMULATIONS << endl;
-    cout << setw(15) << "Operation" << setw(15) << "Vector" << setw(15) << "List" << setw(15) << "Set" << endl;
+    cout << "Operation" << setw(10) << "Vector" << setw(10) << "List" << setw(10) << "Set" << endl;
 
     // average the results
     // outer for loop to go through the array "columns"
@@ -154,21 +154,20 @@ int main() {
         long averageSet  = totalSet / NUM_SIMULATIONS;
 
         // display averages
-        cout << setw(15) << "" << endl;
 
         switch(j) 
         {
             case 0:
-                cout << "Read";
+                cout << left << setw(15) << "Read";
                 break;
             case 1:
-                cout << "Sort";
+                cout << left << setw(15) << "Sort";
                 break;
             case 2:
-                cout << "Insert";
+                cout << left << setw(15) << "Insert";
                 break;
             case 3:
-                cout << "Delete";
+                cout << left << setw(15) << "Delete";
                 break;
             default:
                 break;        
