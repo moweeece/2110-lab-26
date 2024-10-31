@@ -132,7 +132,7 @@ int main() {
     
     // Read time output
     cout << setw(15) << "Number of Simulations: " << NUM_SIMULATIONS << endl;
-    cout << "Operation" << setw(10) << "Vector" << setw(10) << "List" << setw(10) << "Set" << endl;
+    cout << "Operation" << setw(10) << "Vector" << setw(15) << "List" << setw(15) << "Set" << endl;
 
     // average the results
     // outer for loop to go through the array "columns"
@@ -173,7 +173,7 @@ int main() {
                 break;        
         }
 
-        cout << setw(15) << averageVec << setw(15) << averageList << setw(15) << averageSet << endl;
+        cout << setw(15) << averageVec << setw(15) << averageList << setw(20) << averageSet << endl;
 
     }
 
