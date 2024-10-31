@@ -148,13 +148,35 @@ int main() {
             totalSet  += arrayResults[j][2][k];
         }
 
-    }
+        // calculate averages
+        long averageVec  = totalVec / NUM_SIMULATIONS;
+        long averageList = totalList / NUM_SIMULATIONS;
+        long averageSet  = totalSet / NUM_SIMULATIONS;
 
-    // display averages
-    cout << setw(15) << "Read" << setw(15) << durationReadVec.count() << setw(15) << durationReadList.count() << setw(15) << durationReadSet.count() << endl;
-    cout << setw(15) << "Sort" << setw(15) << durationSortVec.count() << setw(15) << durationSortList.count() << setw(15) << durationSortSet << endl;
-    cout << setw(15) << "Insert" << setw(15) << durationInsertVec.count() << setw(15) << durationInsertList.count() << setw(15) << durationInsertSet.count() << endl;
-    cout << setw(15) << "Delete" << setw(15) << durationDeleteVec.count() << setw(15) << durationDeleteList.count() << setw(15) << durationDeleteSet.count() << endl;
+        // display averages
+        cout << setw(15) << "" << endl;
+
+        switch(j) 
+        {
+            case 0:
+                cout << "Read";
+                break;
+            case 1:
+                cout << "Sort";
+                break;
+            case 2:
+                cout << "Insert";
+                break;
+            case 3:
+                cout << "Delete";
+                break;
+            default:
+                break;        
+        }
+
+        cout << setw(15) << averageVec << setw(15) << averageList << setw(15) << averageSet << endl;
+
+    }
 
     return 0;
 }
