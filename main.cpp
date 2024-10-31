@@ -135,8 +135,22 @@ int main() {
     cout << setw(15) << "Operation" << setw(15) << "Vector" << setw(15) << "List" << setw(15) << "Set" << endl;
 
     // average the results
+    // outer for loop to go through the array "columns"
+    for (int j = 0; j < 4; j++)
+    {
+        // variables to hold total sums
+        long totalVec = 0, totalList = 0, totalSet = 0;
 
+        for (int k = 0; k < NUM_SIMULATIONS; k++)
+        {
+            totalVec  += arrayResults[j][0][k];
+            totalList += arrayResults[j][1][k];
+            totalSet  += arrayResults[j][2][k];
+        }
 
+    }
+
+    // display averages
     cout << setw(15) << "Read" << setw(15) << durationReadVec.count() << setw(15) << durationReadList.count() << setw(15) << durationReadSet.count() << endl;
     cout << setw(15) << "Sort" << setw(15) << durationSortVec.count() << setw(15) << durationSortList.count() << setw(15) << durationSortSet << endl;
     cout << setw(15) << "Insert" << setw(15) << durationInsertVec.count() << setw(15) << durationInsertList.count() << setw(15) << durationInsertSet.count() << endl;
